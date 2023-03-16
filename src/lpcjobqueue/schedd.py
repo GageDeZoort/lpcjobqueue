@@ -4,13 +4,10 @@ import os
 import re
 
 logger = logging.getLogger(__name__)
-<<<<<<< HEAD
-=======
 os.environ["CONDOR_CONFIG"] = os.path.join("/srv/.condor_config")
 if not os.path.isfile(os.environ['CONDOR_CONFIG']):
     logger.warn(f"Condor configuration not found! run the following command outside the singularity instance")
-    logger.warn(f"grep -v '^include' /etc/condor/config.d/01_cmslpc_interactive > .condor_config")
->>>>>>> 4dd84278325638e29ee55f032bd70f6f6423e59c
+    logger.warn(f"grep -v '^include' /etc/condor/config.d/01_cmslpc_interactive > .condor_config")xc
 import htcondor  # noqa: E402
 
 
